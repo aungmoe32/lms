@@ -1,5 +1,9 @@
 # Learning Management System
 Simple Learning Management System
+
+## Demo 
+https://youtu.be/a6o9gL58PYc?si=dXAeuJTCtZ6jkFf_
+
 ### Used things
 - Laravel 8
 - Vue 2
@@ -33,6 +37,10 @@ npm run dev
 Install composer packages
 ```
 composer install
+```
+Copy .env
+```
+cp .env.example .env
 ```
 Migrate database tables
 ```
@@ -102,4 +110,4 @@ PAYPAL_SANDBOX_CLIENT_ID=...
 PAYPAL_SANDBOX_CLIENT_SECRET=...
 ```
 ## Contact Me
-aungmoemt32@gmail.com
+aungmoemyintthu@gmail.com
