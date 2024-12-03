@@ -1,113 +1,108 @@
-# Learning Management System
-Simple Learning Management System
+# **LMS**
 
-## Demo 
-https://youtu.be/a6o9gL58PYc?si=dXAeuJTCtZ6jkFf_
+A comprehensive Learning Management System (LMS) built to simplify online learning and course management.
 
-### Used things
-- Laravel 8
-- Vue 2
-- Vuetify for UI
-- Vuex and Vue Router
-- Laravel sanctum for api
+![Alt Text](https://raw.githubusercontent.com/aungmoe32/cv/refs/heads/main/images/lms.jpg)
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-    - [Student](#student)
-    - [Instructor](#instructor)
-    - [Admin](#admin)
-- [Payment](#payment)
-- [Contact me](#contact-me)
+## **Demo**
 
+Explore the demo: [YouTube](https://youtu.be/a6o9gL58PYc?si=dXAeuJTCtZ6jkFf_).
 
+## **Features**
 
+-   **User Authentication**: Login and register functionality with role-based permissions.
+-   **Course Management**:
+    -   Courses have sections and lectures with support for video, audio, text, and documents.
+    -   Includes filtering and searching by categories, price, and levels.
+-   **User Roles**:
+    -   **Student**: Enroll in courses, rate/comment, and learn from curriculums.
+    -   **Instructor**: CRUD operations on courses and sections, and monetize courses.
+    -   **Admin**: Manage users, categories, and roles.
+-   **Course Lecture File Support**:
+    -   Video: MP4, QuickTime
+    -   Audio: MP3, WAV, M4A
+    -   Document: PDF
+-   **Ratings & Comments**: Students can rate and review courses.
+-   **Payment Integration**: Uses PayPal sandbox for course payments.
 
-## Installation
-Install npm packages
-```
-npm install
-```
-Mix assets
-```
-npm run dev
-```
-### For backend
-Install composer packages
-```
-composer install
-```
-Copy .env
-```
-cp .env.example .env
-```
-Migrate database tables
-```
-php artisan migrate
-```
-Seed tables
-```
-php artisan db:seed
-```
-Create symbolic link
-```
-php artisan storage:link
-```
-Serve
-```
-php artisan serve
-```
+## **Tech Stack**
 
+-   **Backend**: Laravel 8
+-   **Frontend**: Vue 2 with Vuetify for UI
+-   **State Management**: Vuex
+-   **Routing**: Vue Router
+-   **API Security**: Laravel Sanctum
 
+## **Implementations**
 
-## Usage
-- For first admin role, add a record with role_id (3) to role_user table
+-   **SPA with Laravel Sanctum API**: Built Vue.js SPA connected to a Laravel Sanctum API backend for secure authentication and data handling.
+-   **Vuetify for UI and Responsive Design**: Built with Vuetify to create UI components like curriculums and tables, ensuring a clean and responsive design for all devices.
+-   **State Management in Vue**: Implemented state management using Vuex, allowing centralized management of application state.
+-   **Role Permissions**:
+    -   Students, Instructors, and Admins have distinct access levels.
+-   **Laravel Eloquent Polymorphic Relationship for Course Lecture Types**: Implemented in Laravel Eloquent that links various lecture content types (video, audio, document, text) to a course lecture.
+-   **API Protection with Middlewares**: Secured the API using Laravel Auth middlewares and implemented custom middleware such as `IsSubscribed` to ensure users have an active subscription and `IsCourseOwner` to verify course ownership before allowing access to specific routes.
+-   **Laravel Sanctum Session-Based Authentication**: Using Laravel Sanctum's session-based cookie authentication, which provides CSRF protection and secures credentials against XSS attacks.
 
-## Features
-- Login and register
-- Search courses
-- Filter courses with categories, prices and level
-- Give ratings and comments on courses
-- View instructor lists
-- [Paypal sandbox for payment](#payment)
-- A course can have many sections and a section can have many lectures
-- A lecture content can be one of the four types(video, audio, document, text)
-- Accept file types : 
-```
-video: ['video/mp4', 'video/quicktime'],
-audio: ['audio/mpeg', 'audio/wav', 'audio/x-m4a'],
-document: ['application/pdf'],
-```
-- It has three roles.
-    - [Student](#student)
-    - [Instructor](#instructor)
-    - [Admin](#admin)
-- Permissions are seperated according to roles
-### Student
-- Enroll courses
-- Learn courses with curriculums
-- Give ratings and comments on courses
-- Can be an Instructor
-### Instructor
-- CRUD courses
-- CRUD curriculums
-- Get an instructor profile
-- Monetize with paid courses
-### Admin
-- CRUD course categories
-- CRUD users
-- Edit user roles
-- Set active or inactive to users
-## Payment
+-   **Eloquent Events for Relationship Models**: I used Laravel Eloquent events to handle updates and deletions of related models, ensuring the integrity and proper management of relationships.
+
+-   **PayPal Integration**: Integrated PayPal using its sandbox environment for testing payments, allowing users to make secure transactions for courses within the application.
+
+## Challenges
+
+-   **State Management in Vue**: Managing the application's state efficiently with Vuex.
+-   **Responsive UI**: Ensuring that the user interface works well across different screen sizes and devices.
+-   **Optimized Eloquent Relationships**: Improving database queries and relationships in Laravel's Eloquent ORM for better performance.
+-   **PayPal Integration**: Integrating PayPal for payment processing, including handling transactions and testing with the sandbox environment.
+
+## **Installation**
+
+### **Frontend**
+
+1.  Install dependencies:
+
+    `npm install`
+
+2.  Compile assets:
+
+    `npm run dev`
+
+### **Backend**
+
+1.  Install dependencies:
+
+    `composer install`
+
+2.  Copy `.env` configuration:
+
+    `cp .env.example .env`
+
+3.  Migrate and seed database:
+
+    `php artisan migrate && php artisan db:seed`
+
+4.  Create a symbolic link:
+
+    `php artisan storage:link`
+
+5.  Serve the application:
+
+    `php artisan serve`
+
+### Payment
+
 Test with Paypal sandbox :
-1. Create a Paypal developer account.
-2. Copy CLIENT_ID and CLIENT_SECRET
-Add CLIENT_ID and CLIENT_SECRET to .env file
+
+-   Create a Paypal developer account.
+-   Copy CLIENT_ID and CLIENT_SECRET
+    Add CLIENT_ID and CLIENT_SECRET to .env file
+
 ```env
 ...
 PAYPAL_SANDBOX_CLIENT_ID=...
 PAYPAL_SANDBOX_CLIENT_SECRET=...
 ```
-## Contact Me
-aungmoemyintthu@gmail.com
+
+### License
+
+This project is licensed under the MIT License – see the [LICENSE](./LICENSE) file for details.
