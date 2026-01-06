@@ -1,4 +1,8 @@
 {
     "/js/main.js": "/js/main.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/fonts/vendor/@mdi/materialdesignicons-webfont.eot?2146c3c82b553977abc7c824eb453634": "/fonts/vendor/@mdi/materialdesignicons-webfont.eot?2146c3c82b553977abc7c824eb453634",
+    "/fonts/vendor/@mdi/materialdesignicons-webfont.woff2?ec024da790d2972da002c9e3f0625ba5": "/fonts/vendor/@mdi/materialdesignicons-webfont.woff2?ec024da790d2972da002c9e3f0625ba5",
+    "/fonts/vendor/@mdi/materialdesignicons-webfont.woff?e55a20c80650829ec5fdd868e583f64b": "/fonts/vendor/@mdi/materialdesignicons-webfont.woff?e55a20c80650829ec5fdd868e583f64b",
+    "/fonts/vendor/@mdi/materialdesignicons-webfont.ttf?1fcc36272ea3e53d0031fbfedffd88cc": "/fonts/vendor/@mdi/materialdesignicons-webfont.ttf?1fcc36272ea3e53d0031fbfedffd88cc"
 }
