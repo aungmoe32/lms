@@ -6,7 +6,7 @@ A comprehensive Learning Management System (LMS) built to simplify online learni
 
 ## **Demo**
 
-Explore the demo: [YouTube](https://youtu.be/a6o9gL58PYc?si=dXAeuJTCtZ6jkFf_).
+Explore the demo: [YouTube](https://www.youtube.com/watch?v=D-DmZRtskYE).
 
 ## **Features**
 
